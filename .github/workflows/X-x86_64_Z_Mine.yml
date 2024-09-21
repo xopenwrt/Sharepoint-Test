@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create Test File
-        run: touch /tmp/foo.txt
+        run: touch test/foo.txt
       - name: Send to Sharepoint
         uses: cringdahl/sharepoint-file-upload-action@v1.2.1
         with:
-          file_path: "*.txt"
+          file_path: "test/*.txt"
           host_name: 'xinbyte.sharepoint.com'
           site_name: 'OpenWrt'
           upload_path: 'OpenWrt/Test'
