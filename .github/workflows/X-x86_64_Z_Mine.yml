@@ -5,7 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create Test File
-        run: touch test/foo.txt
+        run: |
+          mkdir test
+          touch test/foo.txt
+
+
       - name: Send to Sharepoint
         uses: cringdahl/sharepoint-file-upload-action@v1.2.1
         with:
