@@ -7,7 +7,7 @@ jobs:
       - name: Create Test File
         run: |
           mkdir test
-          touch foo.txt
+          echo "hello" >> foo.txt
       - name: 1 Upload SP_UEFI_IMG_GZ to SharePoint
         uses: su-dont/share-point-uploader@v2.1
         with:
