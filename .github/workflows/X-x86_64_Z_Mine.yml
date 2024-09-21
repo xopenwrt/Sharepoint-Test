@@ -7,13 +7,13 @@ jobs:
       - name: Create Test File
         run: |
           mkdir test
-          touch test/foo.txt
+          touch foo.txt
 
 
       - name: Send to Sharepoint
         uses: cringdahl/sharepoint-file-upload-action@v1.2.1
         with:
-          file_path: "test/*.txt"
+          file_path: "*.txt"
           host_name: 'xinbyte.sharepoint.com'
           site_name: 'OpenWrt'
           upload_path: 'OpenWrt/Test'
