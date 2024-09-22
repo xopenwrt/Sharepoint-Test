@@ -1,0 +1,19 @@
+name: example-huge-file-upload
+on: workflow_dispatch
+jobs:
+  get_report:
+    runs-on: self-hosted
+    steps:
+      - name: Create Test File
+        run: |
+          wget https://github.com/xopenwrt/X-OpenWrt-New/releases/download/AutoUpdate/AutoBuild-lede-x86_64-R24.9.18-20240922-UEFI-X-25e5b.img.gz
+
+      - name: Upload file to SharePoint
+        uses: sjultra/Push2Sharepoint@v3.4
+        with:
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          file_name: 'AutoBuild-lede-x86_64-R24.9.18-20240922-UEFI-X-25e5b.img.gz'
+          full_url: 'https://xinbyte.sharepoint.com/sites/OpenWrt'
+          target_subfolder: '/Shared Documents/OpenWrt/Test'
+          
