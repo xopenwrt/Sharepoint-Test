@@ -2,7 +2,7 @@ name: example-huge-file-upload
 on: workflow_dispatch
 jobs:
   get_report:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Create Test File
         run: |
