@@ -15,5 +15,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           file_name: 'AutoBuild-lede-x86_64-R24.9.18-20240922-UEFI-X-25e5b.img.gz'
           full_url: 'https://xinbyte.sharepoint.com/sites/OpenWrt'
-          target_subfolder: '/Shared Documents/OpenWrt/Test'
+          target_subfolder: 'Shared Documents/OpenWrt/Test'
           
