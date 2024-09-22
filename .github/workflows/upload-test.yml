@@ -9,7 +9,7 @@ jobs:
           wget https://github.com/xopenwrt/X-OpenWrt-New/releases/download/AutoUpdate/AutoBuild-lede-x86_64-R24.9.18-20240922-UEFI-X-25e5b.img.gz
 
       - name: Upload file to SharePoint
-        uses: sjultra/Push2Sharepoint@v3.4
+        uses: xopenwrt/Push2Sharepoint@v1.0.0
         with:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
